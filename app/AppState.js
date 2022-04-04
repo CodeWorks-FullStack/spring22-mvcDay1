@@ -10,5 +10,3 @@ let player3 = new Player('dglester harcunkichud', 'TE', 'Alabama', 'https://i.yt
 export const AppState = {
   players: [player1, player2, player3]
 }
-
-// This is called the singleton pattern - this allows us to make sure that only one instance of this class can be instantiated and used

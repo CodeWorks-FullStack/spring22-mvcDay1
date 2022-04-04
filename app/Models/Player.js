@@ -1,3 +1,5 @@
+
+// This is where we define was a player is - the "blueprint"
 export class Player {
   // constructors run immediately when class is instantiated
   constructor(name, position, team, imgURL, score = 0) {
@@ -14,6 +16,7 @@ export class Player {
 
   // HTML template for player
   get Template() {
+    // had to make the id on line 28 unique to make sure we are updating the correct players score
     return /*html*/ `
     <div class="col-md-4">
       <div class="shadow p-2">

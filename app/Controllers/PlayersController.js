@@ -36,17 +36,13 @@ export class PlayersController {
     _drawPlayers()
   }
 
-  drawScore() {
-    _drawScore()
-  }
-
   increaseScore(playerName) {
     // passing player name to the service so that we can find them in the array, and manipulate their score
     // playersService.increaseScore(playerName)
     // ***THIS SHOULD BE HAPPENING IN THE SERVICE - THIS IS ONLY FOR TODAY!!!!!****
     let foundPlayer = AppState.players.find(p => p.name == playerName)
     foundPlayer.score++
-    this.drawScore()
+    _drawScore()
   }
 
 }
