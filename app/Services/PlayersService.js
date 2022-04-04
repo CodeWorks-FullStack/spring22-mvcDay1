@@ -5,7 +5,6 @@ import { PlayersController } from "../Controllers/PlayersController.js";
 // Services are the only place we allow manipulation of data!!!!
 class PlayersService {
   greetPlayers() {
-    // TODO Come back to this later
     console.log(AppState.players);
   }
 
