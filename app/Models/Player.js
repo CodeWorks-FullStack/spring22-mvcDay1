@@ -22,7 +22,7 @@ export class Player {
         <div class="d-flex justify-content-between p-2">
           <h4>${this.name}</h4>
           <h4>${this.position}</h4>
-          <h4>${this.score}</h4>
+          <h4 id="score-${this.name}">${this.score}</h4>
         </div>
         <button class="btn btn-success" onclick="app.playersController.increaseScore('${this.name}')">Increase Score</button>
       </div>

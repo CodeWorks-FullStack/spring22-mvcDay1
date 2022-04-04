@@ -10,10 +10,12 @@ class PlayersService {
   }
 
   increaseScore(playerName) {
-    let foundPlayer = AppState.players.find(p => p.name == playerName)
-    foundPlayer.score++
+    // ***THIS IS THE PROPER WAY - WE WILL DO IT LIKE THIS WHEN WE HAVE PROXYSTATE AND LISTENERS***
+
+    // let foundPlayer = AppState.players.find(p => p.name == playerName)
+    // foundPlayer.score++
     // NOTE this will differ from the full template where we have access to the ProxyState and listeners
-    playersController.drawPlayers()
+    // playersController.drawPlayers()
     console.log('player name in service', foundPlayer);
   }
 }

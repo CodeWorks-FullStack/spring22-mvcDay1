@@ -13,6 +13,12 @@ function _drawPlayers() {
   document.getElementById('players').innerHTML = template
 }
 
+function _drawScore() {
+  AppState.players.forEach(p => {
+    document.getElementById(`score-${p.name}`).innerText = p.score.toString()
+  })
+}
+
 export class PlayersController {
   // INSIDE of the controller is PUBLIC
   constructor() {
@@ -30,9 +36,17 @@ export class PlayersController {
     _drawPlayers()
   }
 
+  drawScore() {
+    _drawScore()
+  }
+
   increaseScore(playerName) {
     // passing player name to the service so that we can find them in the array, and manipulate their score
-    playersService.increaseScore(playerName)
+    // playersService.increaseScore(playerName)
+    // ***THIS SHOULD BE HAPPENING IN THE SERVICE - THIS IS ONLY FOR TODAY!!!!!****
+    let foundPlayer = AppState.players.find(p => p.name == playerName)
+    foundPlayer.score++
+    this.drawScore()
   }
 
 }
